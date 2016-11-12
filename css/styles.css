@@ -1,0 +1,59 @@
+div.bottomPart {
+    width: 1200px;
+    display: inline-block;
+}
+div.leftList{
+    width: 250px;
+    display: inline-block;
+}
+div.leftForm {
+    width: 250px;
+    float: left;
+}
+
+div.rightForm {
+    width: 290px;
+    float: right;
+    display: inline-block;
+}
+div.partName {
+    float: left;
+    width: 130px;
+    margin-top: 10px;
+}
+div.partList {
+    float: right;
+    width: 120px;
+}
+div.centerForm {
+    width: 250px;
+    height: 150px;
+    float: left;
+    position: relative;
+}
+div.newPart {
+    float: left;
+}
+div.loadPart {
+    float: right;
+}
+div.radioC {
+    margin-bottom: 10px;
+}
+div.buttonPart {
+    position: relative;
+    left: 50px;
+    top: 15px;
+}
+div.loadPart {
+    max-width: 130px;
+}
+div#desc {
+    position: absolute;
+    bottom: 0px;
+    border-style: groove;
+    border-color: blue;
+    text-align: right;
+    padding: 5px;
+    margin-left: 5px;
+}
