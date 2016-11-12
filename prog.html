@@ -2,9 +2,163 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>progetto</title>
+    <link rel="icon" href="img/a123.png" type="image/gif" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <h1>Prova</h1>
-  </body>
+
+  <div name = "vita_energia" align = "left">
+    <div>
+    <span name = "vita">Vita</span>
+    <span name = "StatusVita" ><progress id="health" value="65" max="100" background-color="red"></progress></span>
+  </div>
+  <div>
+    <span name = "vita">Energia</span>
+    <span name = "StatusVita"><progress id="health" value="96" max="100"></progress></span>
+  </div>
+
+  </div>
+
+<!-- <div name = "status" align = "right" height = "600" width = "200" >
+   <div name = "valori" align = "center">
+   <div name = "atk">Attacco<div><div name = "valatk">100</div>
+   <div name = "def">Diffesa<div><div name = "valdef">100</div>
+   <div name = "str">Forza<div><div name = "valstr">100</div>
+   <div name = "int">Intelligenza<div><div name = "valint">100</div>
+   <div name = "range">Raggio<div><div name = "valrange">100</div>
+   </div>
+ </div>-->
+
+ <div name = "statusT" align = "right"  aling = "top" height = "600" width = "200" >
+ <table name = tAtr>
+   <tr>
+     <td name = "nomeAtr">
+       Attacco
+     </td>
+     <td name = "valAtr">
+       100
+     </td>
+   <tr>
+     <tr>
+       <td name = "nomeAtr">
+         Diffesa
+       </td>
+       <td  name = "valAtr">
+         100
+       </td>
+     <tr>
+       <tr>
+         <td name = "nomeAtr">
+           Forza
+         </td>
+         <td  name = "valAtr">
+           100
+         </td>
+       <tr>
+         <tr>
+           <td name = "nomeAtr">
+             Intelligenza
+           </td>
+           <td  name = "valAtr">
+             100
+           </td>
+         <tr>
+           <tr>
+             <td name = "nomeAtr">
+               Raggio
+             </td>
+             <td  name = "valAtr">
+               100
+             </td>
+           <tr>
+ </table>
+ </div>
+ <div name = "immagine" align = "center">
+   <img src = "img/1.png" height="500" width="250">
+ </div>
+<div class="bottomPart">
+    <form class="configurazione">
+        <div class="leftForm">
+            <div class="leftList">
+                <div class="partName">Testa</div>
+                <div class="partList"><select class="testa">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Busto</div>
+                <div class="partList"><select class="busto">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Braccio destro</div>
+                <div class="partList"><select class="braccio" id="braccioD">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Braccio sinistro</div>
+                <div class="partList"><select class="braccio" id="braccioS">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Gambe</div>
+                <div class="partList"><select class="gambe">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+        </div>
+        <div class="centerForm">
+            <div id="desc">
+                Qui ci va la descrizione
+            </div>
+        </div>
+        <div class="rightForm">
+            <div>
+                <div class="newPart">
+                    <div class="radioC"><input type="radio" name="radioP" value="newConf">Nuova Conf</div>
+                    <div><input type="checkbox" name="skill1">Skill 1</input>
+                    </div>
+                    <div><input type="checkbox" name="skill2">Skill 2</input>
+                    </div>
+                    <div><input type="checkbox" name="skill3">Skill 3</input>
+                    </div>
+                    <div>
+                        <input type="text" size="10" maxlength="10" placeholder="Il nome della conf" id="nomeConf">
+                    </div>
+                </div>
+                <div class="loadPart">
+                    <div class="radioC"><input type="radio" name="radioP" value="loadConf">Carica Conf</div>
+                    <div><select class="confList" name="confList">
+                        <option value="nessuna">Nessuna conf salvata</option>
+                    </select></div>
+                </div>
+            </div>
+            <div class="buttonPart"><input type="Submit" value="Salva la configurazione"></div>
+        </div>
+    </form>
+</div>
+    </body>
 </html>
