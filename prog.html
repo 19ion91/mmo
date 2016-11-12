@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="icon" href="img/a123.png" type="image/gif" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
 
@@ -75,5 +76,89 @@
  <div name = "immagine" align = "center">
    <img src = "img/1.png" height="500" width="250">
  </div>
-  </body>
+<div class="bottomPart">
+    <form class="configurazione">
+        <div class="leftForm">
+            <div class="leftList">
+                <div class="partName">Testa</div>
+                <div class="partList"><select class="testa">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Busto</div>
+                <div class="partList"><select class="busto">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Braccio destro</div>
+                <div class="partList"><select class="braccio" id="braccioD">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Braccio sinistro</div>
+                <div class="partList"><select class="braccio" id="braccioS">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+            <div class="leftList">
+                <div class="partName">Gambe</div>
+                <div class="partList"><select class="gambe">
+                    <option value="1">Item1</option>
+                    <option value="2">Item2</option>
+                    <option value="3">Item3</option>
+                    <option value="4">Item4</option>
+                    <option value="5">Item5</option>
+                </select></div>
+            </div>
+        </div>
+        <div class="centerForm">
+            <div id="desc">
+                Qui ci va la descrizione
+            </div>
+        </div>
+        <div class="rightForm">
+            <div>
+                <div class="newPart">
+                    <div class="radioC"><input type="radio" name="radioP" value="newConf">Nuova Conf</div>
+                    <div><input type="checkbox" name="skill1">Skill 1</input>
+                    </div>
+                    <div><input type="checkbox" name="skill2">Skill 2</input>
+                    </div>
+                    <div><input type="checkbox" name="skill3">Skill 3</input>
+                    </div>
+                    <div>
+                        <input type="text" size="10" maxlength="10" placeholder="Il nome della conf" id="nomeConf">
+                    </div>
+                </div>
+                <div class="loadPart">
+                    <div class="radioC"><input type="radio" name="radioP" value="loadConf">Carica Conf</div>
+                    <div><select class="confList" name="confList">
+                        <option value="nessuna">Nessuna conf salvata</option>
+                    </select></div>
+                </div>
+            </div>
+            <div class="buttonPart"><input type="Submit" value="Salva la configurazione"></div>
+        </div>
+    </form>
+</div>
+    </body>
 </html>
