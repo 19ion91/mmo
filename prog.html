@@ -1,10 +1,196 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>progetto</title>
+    <link rel="icon" href="img/a123.png" type="image/gif" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type = "text/JavaScript" language = "JavaScript" src = "script/funzioni.js" ></script>
   </head>
+
+
+
   <body>
-    <h1>Prova</h1>
-  </body>
+<div class = "part">
+  <div class ="left">
+  <div class = "vita_energia">
+      <div name = "vita">Vita</div>
+         <div class = "progress">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                  <!--in caso mettere testo-->
+            </div>
+        </div>
+    <div name = "energia">Energia</div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+              <!--in caso mettere testo-->
+        </div>
+      </div>
+  </div>
+  <div class ="lista">
+<!--  <div class="leftList"> -->
+      <div class="partName">Testa</div>
+      <div class="partList"><select id="testa" onchange = "cambiaT();">
+          <option value="0"></option>
+          <option value="1">Blu</option>
+          <option value="2">Rosso</option>
+          <option value="3">Nero</option>
+          <option value="4">Verde</option>
+          <option value="5">Pro</option>
+      </select></div>
+<!--  </div> -->
+<!--  <div class="leftList"> -->
+      <div class="partName">Busto</div>
+      <div class="partList"><select id="busto" onchange = "cambiaB();">
+        <option value="0"></option>
+        <option value="1">Blu</option>
+        <option value="2">Rosso</option>
+        <option value="3">Nero</option>
+        <option value="4">Verde</option>
+        <option value="5">Pro</option>
+      </select></div>
+<!--  </div> -->
+<!--  <div class="leftList"> -->
+      <div class="partName">Braccio destro</div>
+      <div class="partList"><select id="braccioD" onchange = "cambiaMD();">
+        <option value="0"></option>
+        <option value="1">Blu</option>
+        <option value="2">Rosso</option>
+        <option value="3">Nero</option>
+        <option value="4">Verde</option>
+        <option value="5">Pro</option>
+      </select></div>
+<!--  </div> -->
+<!--  <div class="leftList"> -->
+      <div class="partName">Braccio sinistro</div>
+      <div class="partList"><select id="braccioS" onchange = "cambiaMS();">
+        <option value="0"></option>
+        <option value="1">Blu</option>
+        <option value="2">Rosso</option>
+        <option value="3">Nero</option>
+        <option value="4">Verde</option>
+        <option value="5">Pro</option>
+      </select></div>
+<!--  </div> -->
+
+<!--  <div class="leftList"> -->
+      <div class="partName">Gambe</div>
+      <div class="partList"><select id="gambe" onchange = "cambiaG();">
+        <option value="0"></option>
+        <option value="1">Blu</option>
+        <option value="2">Rosso</option>
+        <option value="3">Nero</option>
+        <option value="4">Verde</option>
+        <option value="5">Pro</option>
+      </select></div>
+<!--  </div> -->
+</div>
+
+  <div id="desc">
+      Qui ci va la descrizione
+  </div>
+
+</div>
+<!-- sinistra finisce qui-->
+
+
+<!-- centro inizia qui-->
+<div class = "center">
+<!---------------------->
+
+
+    <img id= "part1" src = "img/gundam/testa.png" height="500">
+
+    <img id= "part2" src = "img/gundam/corpo.png" height="500">
+
+    <img id= "part3" src = "img/gundam/manoD.png" height="500">
+
+    <img id= "part4" src = "img/gundam/manoS.png" height="500">
+
+    <img id= "part5" src = "img/gundam/gambe.png" height="500">
+
+
+<!----------------------->
+</div>
+<!-- centro finisce qui-->
+
+
+<!-- destra inizia qui-->
+<div class = "right">
+ <div class = "statusT" >
+ <table name = tAtr>
+   <tr>
+     <td name = "nomeAtr">
+       Attacco
+     </td>
+     <td name = "valAtr">
+       100
+     </td>
+   <tr>
+     <tr>
+       <td name = "nomeAtr">
+         Diffesa
+       </td>
+       <td  name = "valAtr">
+         100
+       </td>
+     <tr>
+       <tr>
+         <td name = "nomeAtr">
+           Forza
+         </td>
+         <td  name = "valAtr">
+           100
+         </td>
+       <tr>
+         <tr>
+           <td name = "nomeAtr">
+             Intelligenza
+           </td>
+           <td  name = "valAtr">
+             100
+           </td>
+         <tr>
+           <tr>
+             <td name = "nomeAtr">
+               Raggio
+             </td>
+             <td  name = "valAtr">
+               100
+             </td>
+           <tr>
+ </table>
+ </div>
+
+
+  <!--  <form class="configurazione">
+        <div class="leftForm">
+
+        <div class="rightForm">
+            <div> -->
+                <div class="newPart">
+                    <div class="radioC"><input type="radio" name="radioP" value="newConf">Nuova Conf</div>
+                    <div><input type="checkbox" name="skill1">Skill 1</input>
+                    </div>
+                    <div><input type="checkbox" name="skill2">Skill 2</input>
+                    </div>
+                    <div><input type="checkbox" name="skill3">Skill 3</input>
+                    </div>
+                    <div>
+                        <input type="text" size="10" maxlength="10" placeholder="Il nome della conf" id="nomeConf" >
+                    </div>
+                </div>
+                <div class="loadPart">
+                    <div class="radioC"><input type="radio" name="radioP" value="loadConf">Carica Conf</div>
+                    <div><select class="confList" name="confList">
+                        <option value="nessuna">Nessuna conf salvata</option>
+                    </select></div>
+                </div>
+
+            <div class="buttonPart"><input type="Submit" value="Salva la configurazione"></div>
+            </div>
+        </div>
+    <!--</form>
+</div>-->
+    </body>
 </html>
