@@ -4,7 +4,6 @@ body {
     /*background-position: center;      /* center the image */
     background-size: cover;           /* cover the entire window */
 }
-.flex {max-width: 100%}
 div.part {
     width: 1300px;
     display: inline-block;
@@ -43,6 +42,7 @@ div.partList {
     width: 120px;
     margin-top: 8.5px;
 }
+/*center -----------------------------------------------------------*/
 div.center {
     width: 550px;
     margin-top:70px;
@@ -50,6 +50,28 @@ div.center {
     float: left;
     position: relative;
 }
+#part1 {
+  position:absolute;
+  float:left;
+
+}
+#part2 {
+  position:absolute;
+  float:left;
+}
+#part3 {
+  position:absolute;
+  float:left;
+}
+#part4 {
+  position:absolute;
+  float:left;
+}
+#part5 {
+  position:absolute;
+  float:left;
+}
+/*-----fine center-------------------------------------------------*/
 div.newPart {
 
         display: inline-block;
