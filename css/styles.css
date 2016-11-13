@@ -4,49 +4,45 @@ body {
     /*background-position: center;      /* center the image */
     background-size: cover;           /* cover the entire window */
 }
-div.part {
-    width: 1300px;
+div.part div.form{
     display: inline-block;
-    margin-top :30px;
-    margin-left :30px;
 }
 div.lista{
-    width: 250px;
-    margin-top: 100px;
+    width: 260px;
     display: inline-block;
+    float: left;
+    position: relative;
+    top: 180px;
 }
 
 div.leftList{
     width: 250px;
     display: inline-block;
 }
-
 div.left{
     width: 250px;
     float: left;
+    padding: 10px;
 }
 
 div.right {
-    width: 350px;
-    float: left;
+    float: right;
     display: inline-block;
-    margin-left:50px;
+    position: relative;
+    right: 100px;
 }
 div.partName {
     float: left;
     width: 130px;
-    margin-top: 10px;
+    margin-top: 11px;
 }
 div.partList {
     float: right;
     width: 120px;
-    margin-top: 8.5px;
 }
 /*center -----------------------------------------------------------*/
 div.center {
-    width: 550px;
-    margin-top:70px;
-    margin-left:100px;
+    width: 570px;
     float: left;
     position: relative;
 }
@@ -72,39 +68,39 @@ div.center {
   float:left;
 }
 /*-----fine center-------------------------------------------------*/
+div.rightFrom {
+    position: relative;
+    top: 200px;
+}
 div.newPart {
-
-        display: inline-block;
-            margin-top: 50px;
+    display: inline-block;
     float: left;
 }
 div.loadPart {
-  margin-top:50px;
-    margin-left:70px;
+    margin-left:20px;
     float: left;
 }
 div.radioC {
-  margin-top:70px;
-    margin-bottom: 10px;
+     margin-bottom: 10px;
 }
 div.buttonPart {
-  max-width: 130px;
-  margin-top:170px;
+    max-width: 130px;
     position: relative;
-
-    top: 15px;
+    top: 25px;
+    left: 70px;
 }
 div.loadPart {
     max-width: 130px;
 }
 div#desc {
-
-    bottom: 0px;
+    float: left;
+    position: relative;
+    top: 70px;
+    left: 230px;
     border-style: groove;
     border-color: blue;
     text-align: center;
     padding: 5px;
-    margin-top: 25px;
 }
 
 .progress-bar-danger {
@@ -148,7 +144,7 @@ div.vita_energia{
 }
 div.statusT{
   width: 250px;
-
+    float: right;
 }
 div.immagine{
   width:auto;
