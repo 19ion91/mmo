@@ -28,7 +28,7 @@
       </div>
   </div>
   <div class ="lista">
-<!--  <div class="leftList"> -->
+
       <div class="partName">Testa</div>
       <div class="partList"><select id="testa" onchange = "cambiaT();">
           <option value="0"></option>
@@ -38,8 +38,7 @@
           <option value="4">Verde</option>
           <option value="5">Pro</option>
       </select></div>
-<!--  </div> -->
-<!--  <div class="leftList"> -->
+
       <div class="partName">Busto</div>
       <div class="partList"><select id="busto" onchange = "cambiaB();">
         <option value="0"></option>
@@ -49,8 +48,7 @@
         <option value="4">Verde</option>
         <option value="5">Pro</option>
       </select></div>
-<!--  </div> -->
-<!--  <div class="leftList"> -->
+
       <div class="partName">Braccio destro</div>
       <div class="partList"><select id="braccioD" onchange = "cambiaMD();">
         <option value="0"></option>
@@ -60,8 +58,7 @@
         <option value="4">Verde</option>
         <option value="5">Pro</option>
       </select></div>
-<!--  </div> -->
-<!--  <div class="leftList"> -->
+
       <div class="partName">Braccio sinistro</div>
       <div class="partList"><select id="braccioS" onchange = "cambiaMS();">
         <option value="0"></option>
@@ -71,9 +68,7 @@
         <option value="4">Verde</option>
         <option value="5">Pro</option>
       </select></div>
-<!--  </div> -->
 
-<!--  <div class="leftList"> -->
       <div class="partName">Gambe</div>
       <div class="partList"><select id="gambe" onchange = "cambiaG();">
         <option value="0"></option>
@@ -96,8 +91,8 @@
 
 <!-- centro inizia qui-->
 <div class = "center">
-<!---------------------->
 
+<div id = "inv">
 
     <img id= "part1" src = "img/gundam/testa.png" height="500">
 
@@ -109,8 +104,12 @@
 
     <img id= "part5" src = "img/gundam/gambe.png" height="500">
 
+    <img id = "fiamma" src = "" height = "500" >
 
-<!----------------------->
+    <img id = "trasform" src = "" height = "500" >
+
+</div>
+
 </div>
 <!-- centro finisce qui-->
 
@@ -162,35 +161,49 @@
  </table>
  </div>
 
-
-  <!--  <form class="configurazione">
-        <div class="leftForm">
-
-        <div class="rightForm">
-            <div> -->
                 <div class="newPart">
-                    <div class="radioC"><input type="radio" name="radioP" value="newConf">Nuova Conf</div>
-                    <div><input type="checkbox" name="skill1">Skill 1</input>
-                    </div>
-                    <div><input type="checkbox" name="skill2">Skill 2</input>
-                    </div>
-                    <div><input type="checkbox" name="skill3">Skill 3</input>
+
+
+                  <div>
+                      <input type="button" id="skill1" value = "aura" size="50" onclick = "auraS()";></input>
                     </div>
                     <div>
-                        <input type="text" size="10" maxlength="10" placeholder="Il nome della conf" id="nomeConf" >
+                      <input type="button" id="skill2" value = "invisibilita" onclick = "invisibile();"></input>
                     </div>
-                </div>
+                    <div>
+                      <input type="button" id="skill3"  value = "trasformazione" onclick = "abilita3();"></input>
+                    </div>
+                    <div>
+                      <input type="button" id="reset1"  value = "reset" onclick = "reset();"></input>
+                    </div>
+
+
+
+                    <div class="radioC">
+                      <input type="radio" name="radioP" value="newConf">Nuova Conf</div>
+
+                      <div>
+                          <input type="text" size="20" maxlength="10" placeholder="Nome della configurazione" id="nomeConf" >
+                      </div>
+                      <div> 
+                          <input type="Submit" id="salva" value="Salva la configurazione"></div>
+                      </div>
+
+
+
                 <div class="loadPart">
                     <div class="radioC"><input type="radio" name="radioP" value="loadConf">Carica Conf</div>
                     <div><select class="confList" name="confList">
                         <option value="nessuna">Nessuna conf salvata</option>
                     </select></div>
                 </div>
-
-            <div class="buttonPart"><input type="Submit" value="Salva la configurazione"></div>
-            </div>
+</div>
+        <!--    <div class="buttonPart">
+          <div class="buttonPart">
+              <input type="Submit" value="Salva la configurazione"></div>
+              </div>
+        <!--      </div>-->
         </div>
-    <!--</form>
-</div>-->
+
     </body>
 </html>

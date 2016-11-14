@@ -25,12 +25,18 @@ div.left{
     width: 250px;
     float: left;
 }
-
+div.fia{
+  margin-left: -55px;
+}
+div.Trasformazione1{
+  margin-left: -100px;
+}
 div.right {
     width: 350px;
     float: left;
     display: inline-block;
     margin-left:50px;
+    position: relative;
 }
 div.partName {
     float: left;
@@ -49,6 +55,10 @@ div.center {
     margin-left:100px;
     float: left;
     position: relative;
+
+}
+div.inv{
+    opacity: 1;
 }
 #part1 {
   position:absolute;
@@ -71,29 +81,34 @@ div.center {
   position:absolute;
   float:left;
 }
+
+#fiamma{
+  position:inherit;
+  float:left;
+  margin-left: -55px;
+}
+#trasform{
+  position:absolute;
+  float:left;
+  margin-left: -155px;
+}
 /*-----fine center-------------------------------------------------*/
 div.newPart {
 
-        display: inline-block;
-            margin-top: 50px;
+    display: inline-block;
+    margin-top: 70px;
     float: left;
 }
 div.loadPart {
-  margin-top:50px;
-    margin-left:70px;
+  margin-top:165px;
+    margin-left:20px;
     float: left;
 }
 div.radioC {
-  margin-top:70px;
-    margin-bottom: 10px;
+  margin-top:50px;
+  margin-bottom: 10px;
 }
-div.buttonPart {
-  max-width: 130px;
-  margin-top:170px;
-    position: relative;
 
-    top: 15px;
-}
 div.loadPart {
     max-width: 130px;
 }
@@ -152,4 +167,22 @@ div.statusT{
 }
 div.immagine{
   width:auto;
+}
+
+#skill1{
+  width: 100px;
+}
+#skill2{
+  width: 100px;
+}
+#skill3{
+  width: 100px;
+}
+#reset1{
+  width: 100px;
+  margin-top: 10px;
+}
+#salva{
+  width: 173px;
+  margin-top: 10px;
 }
