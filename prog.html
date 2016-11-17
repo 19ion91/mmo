@@ -5,158 +5,150 @@
     <meta charset="utf-8">
     <link rel="icon" href="img/a123.png" type="image/gif" sizes="32x32">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script type="text/JavaScript" language="JavaScript" src="script/funzioni.js"></script>
+    <script type="text/JavaScript" language="JavaScript" src="./script/jquery-3.1.1.min.js"></script>
+    <script type="text/JavaScript" language="JavaScript" src="./script/funzioni.js"></script>
 </head>
-
-
 
 <body>
     <div class="part">
         <div class="left">
-            <div class="vita_energia">
-                <div name="vita">Vita</div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        <!--in caso mettere testo-->
-                    </div>
-                </div>
-                <div name="energia">Energia</div>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-danger1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        <!--in caso mettere testo-->
-                    </div>
+            <div class="descVE">Vita</div>
+            <div class="progress">
+                <div id="progress-vita">
+                    <!--in caso mettere testo-->
                 </div>
             </div>
-            <div name="form">
-                <div class="lista">
-                <!--  <div class="leftList"> -->
+            <div class="descVE">Energia</div>
+            <div class="progress">
+                <div id="progress-energ">
+                    <!--in caso mettere testo-->
+                </div>
+            </div>
+            <div class="lista">
                 <div class="partName">Testa</div>
                 <div class="partList">
-                    <select id="testa" onchange="cambiaT();">
+                    <select id="testa" onchange="cambiaT();" form="myForm">
                         <option value="0"></option>
-                        <option value="1">Blu</option>
-                        <option value="2">Rosso</option>
-                        <option value="3">Nero</option>
-                        <option value="4">Verde</option>
-                        <option value="5">Pro</option>
+                        <option class="atr" value="1">Blu</option>
+                        <option class="atr" value="2">Rosso</option>
+                        <option class="atr" value="3">Nero</option>
+                        <option class="atr" value="4">Verde</option>
+                        <option class="atr" value="5">Pro</option>
                     </select>
                 </div>
                 <div class="partName">Busto</div>
                 <div class="partList">
                     <select id="busto" onchange="cambiaB();">
                         <option value="0"></option>
-                        <option value="1">Blu</option>
-                        <option value="2">Rosso</option>
-                        <option value="3">Nero</option>
-                        <option value="4">Verde</option>
-                        <option value="5">Pro</option>
+                        <option class="atr" value="1">Blu</option>
+                        <option class="atr" value="2">Rosso</option>
+                        <option class="atr" value="3">Nero</option>
+                        <option class="atr" value="4">Verde</option>
+                        <option class="atr" value="5">Pro</option>
                     </select>
                 </div>
                 <div class="partName">Braccio destro</div>
                 <div class="partList">
                     <select id="braccioD" onchange="cambiaMD();">
                         <option value="0"></option>
-                        <option value="1">Blu</option>
-                        <option value="2">Rosso</option>
-                        <option value="3">Nero</option>
-                        <option value="4">Verde</option>
-                        <option value="5">Pro</option>
+                        <option class="atr" value="1">Blu</option>
+                        <option class="atr" value="2">Rosso</option>
+                        <option class="atr" value="3">Nero</option>
+                        <option class="atr" value="4">Verde</option>
+                        <option class="atr" value="5">Pro</option>
                     </select>
                 </div>
                 <div class="partName">Braccio sinistro</div>
                 <div class="partList">
                     <select id="braccioS" onchange="cambiaMS();">
                         <option value="0"></option>
-                        <option value="1">Blu</option>
-                        <option value="2">Rosso</option>
-                        <option value="3">Nero</option>
-                        <option value="4">Verde</option>
-                        <option value="5">Pro</option>
+                        <option class="atr" value="1">Blu</option>
+                        <option class="atr" value="2">Rosso</option>
+                        <option class="atr" value="3">Nero</option>
+                        <option class="atr" value="4">Verde</option>
+                        <option class="atr" value="5">Pro</option>
                     </select>
                 </div>
                 <div class="partName">Gambe</div>
                 <div class="partList">
                     <select id="gambe" onchange="cambiaG();">
                         <option value="0"></option>
-                        <option value="1">Blu</option>
-                        <option value="2">Rosso</option>
-                        <option value="3">Nero</option>
-                        <option value="4">Verde</option>
-                        <option value="5">Pro</option>
+                        <option class="atr" value="1">Blu</option>
+                        <option class="atr" value="2">Rosso</option>
+                        <option class="atr" value="3">Nero</option>
+                        <option class="atr" value="4">Verde</option>
+                        <option class="atr" value="5">Pro</option>
                     </select>
                 </div>
             </div>
-                <div id="desc">Qui ci va la descrizione</div>
-            </div>
+            <div id="desc">Qui ci va la descrizione</div>
         </div>
         <!-- sinistra finisce qui-->
 
         <!-- centro inizia qui-->
-        <div class="center">
-            <img id="part1" src="img/gundam/testa.png" height="500">
-
-            <img id="part2" src="img/gundam/corpo.png" height="500">
-
-            <img id="part3" src="img/gundam/manoD.png" height="500">
-
-            <img id="part4" src="img/gundam/manoS.png" height="500">
-
-            <img id="part5" src="img/gundam/gambe.png" height="500">
+        <div class="center" id="center">
+            <img class="immagine" id="part1" src="img/gundam/testa.png">
+            <img class="immagine" id="part2" src="img/gundam/corpo.png">
+            <img class="immagine" id="part3" src="img/gundam/manoD.png">
+            <img class="immagine" id="part4" src="img/gundam/manoS.png">
+            <img class="immagine" id="part5" src="img/gundam/gambe.png">
+            <img class="immagine" id="fiamma" src="">
+            <img class="immagine" id="trasform" src="">
         </div>
         <!-- centro finisce qui-->
 
         <!-- destra inizia qui-->
         <div class="right">
-            <div class="statusT">
-                <table name="table">
+            <div class="right-table">
+                <table class="table">
                     <tr>
-                        <td name="nomeAtr">Attacco</td>
-                        <td name="valAtr">100</td>
+                        <td id="nomeAtr">Attacco</td>
+                        <td class="rightTd" id="valAtr">100</td>
                     <tr>
-                        <td name="nomeAtr">Diffesa</td>
-                        <td name="valAtr">100</td>
+                        <td id="nomeAtr">Diffesa</td>
+                        <td class="rightTd" id="valAtr">100</td>
                     <tr>
-                        <td name="nomeAtr">Forza</td>
-                        <td name="valAtr">100</td>
+                        <td id="nomeAtr">Forza</td>
+                        <td class="rightTd" id="valAtr">100</td>
                     <tr>
-                        <td name="nomeAtr">Intelligenza</td>
-                        <td name="valAtr">100</td>
+                        <td id="nomeAtr">Intelligenza</td>
+                        <td class="rightTd" id="valAtr">100</td>
                     <tr>
-                        <td name="nomeAtr">Raggio</td>
-                        <td name="valAtr">100</td>
+                        <td id="nomeAtr">Raggio</td>
+                        <td class="rightTd" id="valAtr">100</td>
                 </table>
             </div>
-            <div class="rightFrom">
-                <div class="newPart">
-                    <div class="radioC">
-                        <input type="radio" name="radioP" value="newConf">Nuova Conf
-                    </div>
-                    <div>
-                        <input type="checkbox" name="skill1">Skill 1
-                    </div>
-                    <div>
-                        <input type="checkbox" name="skill2">Skill 2
-                    </div>
-                    <div>
-                        <input type="checkbox" name="skill3">Skill 3
-                    </div>
-                    <div>
-                        <input type="text" size="10" maxlength="10" placeholder="Il nome della conf" id="nomeConf">
-                    </div>
+            <div class="right-skill">
+                <div class="right-cont">
+                    <button id="skill1" onclick="auraS();">Aura</button>
+                    <button id="skill2" onclick="invisibile();">Invisibilità</button>
                 </div>
-                <div class="loadPart">
-                    <div class="radioC">
-                        <input type="radio" name="radioP" value="loadConf">Carica Conf
+                <form name="trasformazione" >
+                    <div class="right-cont">
+                        <div id="secDesc">La durata in secondi</div>
+                        <input type="number" id="secNumber" min="1" max="5" required="true">
+                        <input type="submit" id="trasformButton" value="Trasforma">
                     </div>
-                    <div>
-                        <select class="confList" name="confList">
-                            <option value="nessuna">Nessuna conf salvata
-                        </select>
+                </form>
+            </div>
+            <div class="right-form">
+                <form name="myForm">
+                    <div class="right-cont">
+                        <div class="radioN">
+                            <input type="radio" name="radioP" id="radioN" value="newConf">Nuova Conf
+                        </div>
+                        <div class="radioL">
+                            <input type="radio" name="radioP" id="radioL" value="loadConf">Carica Conf
+                        </div>
                     </div>
-                </div>
-                <div class="buttonPart">
-                    <input type="Submit" value="Salva la configurazione">
-                </div>
+                    <div class="formItem" id="formDesc">Il nome della configurazione</div>
+                    <div class="formItem" id="formNome">
+                        <input type="text" size="10" maxlength="10" placeholder="Scrivi qui" id="nomeConf" required="true">
+                    </div>
+                    <div class="formItem" id="formButtonDiv">
+                        <input type="Submit" id="formButton" value="Salva la configurazione">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
