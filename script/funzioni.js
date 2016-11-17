@@ -86,15 +86,25 @@ function abilita3(){
 	document.getElementById("skill2").disabled=true;
 }
 function auraS(){
-	document.getElementById("fiamma").src ="img/gundam/fiammaVerde.png";
+	var a = document.getElementById("fiamma")
+	if (a.src.endsWith("png")) {
+		a.src = "";
+	}
+	else {
+		a.src = "./img/gundam/fiammaVerde2.png";
+	}
 }
 function invisibile(){
-var a = document.getElementById("inv");
-a.style.opacity="0.70";
+	var a = document.getElementById("center");
+	if (a.style.opacity == "0.7") {
+		a.style.opacity = "1";
+	} else {
+		a.style.opacity="0.70";
+	}
 }
 function reset(){
 	document.getElementById("part1").src ="img/gundam/testa.png";
-  document.getElementById("testa").value="0";
+  	document.getElementById("testa").value="0";
 	document.getElementById("part2").src ="img/gundam/corpo.png";
 	document.getElementById("busto").value="0";
 	document.getElementById("part3").src ="img/gundam/manoD.png";
@@ -114,3 +124,23 @@ function reset(){
 	document.getElementById("skill1").disabled=false;
 	document.getElementById("skill2").disabled=false;
 }
+
+
+(function($) {
+    $(document).ready(function() {
+        $("option.atr").hover(function() {
+            console.log($(this)[0].value);
+            $("div#desc").text = $(this)[0].value;
+        }, function() {
+            console.log("esce");
+            $("div#desc").text = "Qui ci va la descrizione."
+        });
+    });
+    $(window).load(function() {
+        console.log('load');
+        setSettings();
+    });
+    $(window).resize(function() {
+        console.log('resize');
+    });
+})(window.jQuery);
