@@ -59,10 +59,11 @@ div#desc {
     position: relative;
     top: -120px;
     left: 230px;
-    border-style: groove;
+    border-radius: 10px;
     border-color: blue;
     text-align: center;
     padding: 5px;
+    width: 120px;
 }
 
 

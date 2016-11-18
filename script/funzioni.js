@@ -1,3 +1,17 @@
+var description = {
+	"testa" : "L'intelligenza aumenta di v1 unita",
+	"busto" : "La forza aumenta di v1 unita",
+	"braccioS" : "La forza aumenta di v1 unita",
+	"braccioD" : "La diffesa aumenta di v1 unita",
+	"gambe" : "Il raggio aumenta di v1 unita",
+}
+var colore = {
+	"1" : "blue",
+	"2" : "red",
+	"3" : "black",
+	"4" : "green",
+	"5" : "orange"
+}
 function cambiaT(){
 	if(document.getElementById("testa").value == "1"){
 		document.getElementById("part1").src = "img/gundam/testaB.png";
@@ -103,44 +117,37 @@ function invisibile(){
 	}
 }
 function reset(){
-	document.getElementById("part1").src ="img/gundam/testa.png";
-  	document.getElementById("testa").value="0";
-	document.getElementById("part2").src ="img/gundam/corpo.png";
-	document.getElementById("busto").value="0";
-	document.getElementById("part3").src ="img/gundam/manoD.png";
-	document.getElementById("braccioD").value="0";
-	document.getElementById("part4").src ="img/gundam/manoS.png";
-	document.getElementById("braccioS").value="0";
-	document.getElementById("part5").src ="img/gundam/gambe.png";
-	document.getElementById("gambe").value="0";
-	document.getElementById("fiamma").src ="";
-	document.getElementById("trasform").src ="";
-	document.getElementById("inv").style.opacity="1";
-	document.getElementById("testa").disabled=false;
-	document.getElementById("busto").disabled=false;
-	document.getElementById("braccioD").disabled=false;
-	document.getElementById("braccioS").disabled=false;
-	document.getElementById("gambe").disabled=false;
-	document.getElementById("skill1").disabled=false;
-	document.getElementById("skill2").disabled=false;
+	console.log("dsfs");
+	var opt = $("select");
+	var j;
+	for(j=0;j<opt.length;j++)
+		opt[j].value="0"
+	$("#desc").slideUp();
+	$("#radioN")[0].checked = false;
+	$("#radioL")[0].checked = false;
+	$("#secNumber")[0].value = "3";
+	var tab = $(".rightTd");
+	for (j = 0; j < tab.length; j++) {
+		tab[j].innerHTML = "200";
+	}
+	console.log("aksj");
 }
 
 
-(function($) {
-    $(document).ready(function() {
-        $("option.atr").hover(function() {
-            console.log($(this)[0].value);
-            $("div#desc").text = $(this)[0].value;
-        }, function() {
-            console.log("esce");
-            $("div#desc").text = "Qui ci va la descrizione."
-        });
+$(window).on('load', function () {
+    $("option.atr").hover(function() {
+		var desc = $("#desc");
+		desc.finish()
+        desc[0].innerHTML = description[$(this).parent().attr("id")].replace("v1",parseInt([$(this)[0].value])*25);
+		desc.css("background-color", colore[$(this)[0].value]);
+		desc.slideDown(500);
+    }, function() {
+		var desc = $("#desc");
+		desc.finish()
+		$("div#desc")[0].innerHTML = ""
+		$("#desc").slideUp(20);
     });
-    $(window).load(function() {
-        console.log('load');
-        setSettings();
-    });
-    $(window).resize(function() {
-        console.log('resize');
-    });
-})(window.jQuery);
+	console.log("sdfs");
+	reset();
+	console.log("sada");
+});

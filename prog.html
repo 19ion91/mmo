@@ -102,20 +102,20 @@
             <div class="right-table">
                 <table class="table">
                     <tr>
-                        <td id="nomeAtr">Attacco</td>
-                        <td class="rightTd" id="valAtr">100</td>
+                        <td class="nomeAtr">Attacco</td>
+                        <td class="rightTd" id="attacco">100</td>
                     <tr>
-                        <td id="nomeAtr">Diffesa</td>
-                        <td class="rightTd" id="valAtr">100</td>
+                        <td class="nomeAtr">Difesa</td>
+                        <td class="rightTd" id="difesa">100</td>
                     <tr>
-                        <td id="nomeAtr">Forza</td>
-                        <td class="rightTd" id="valAtr">100</td>
+                        <td class="nomeAtr">Forza</td>
+                        <td class="rightTd" id="forza">100</td>
                     <tr>
-                        <td id="nomeAtr">Intelligenza</td>
-                        <td class="rightTd" id="valAtr">100</td>
+                        <td class="nomeAtr">Intelligenza</td>
+                        <td class="rightTd" id="intel">100</td>
                     <tr>
-                        <td id="nomeAtr">Raggio</td>
-                        <td class="rightTd" id="valAtr">100</td>
+                        <td class="nomeAtr">Raggio</td>
+                        <td class="rightTd" id="raggio">100</td>
                 </table>
             </div>
             <div class="right-skill">
@@ -123,13 +123,11 @@
                     <button id="skill1" onclick="auraS();">Aura</button>
                     <button id="skill2" onclick="invisibile();">Invisibilità</button>
                 </div>
-                <form name="trasformazione" >
-                    <div class="right-cont">
-                        <div id="secDesc">La durata in secondi</div>
-                        <input type="number" id="secNumber" min="1" max="5" required="true">
-                        <input type="submit" id="trasformButton" value="Trasforma">
-                    </div>
-                </form>
+                <div class="right-cont">
+                    <div id="secDesc">La durata in secondi</div>
+                    <input type="number" id="secNumber" min="1" max="5">
+                    <input type="submit" id="trasformButton" value="Trasforma" onclick="reset();">
+                </div>
             </div>
             <div class="right-form">
                 <form name="myForm">
@@ -146,7 +144,7 @@
                         <input type="text" size="10" maxlength="10" placeholder="Scrivi qui" id="nomeConf" required="true">
                     </div>
                     <div class="formItem" id="formButtonDiv">
-                        <input type="Submit" id="formButton" value="Salva la configurazione">
+                        <input type="Submit" id="formButton" value="Salva la configurazione" onclick="reset();">
                     </div>
                 </form>
             </div>
