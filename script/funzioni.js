@@ -40,6 +40,7 @@ var energy = 100;
 function cambiaT(){
 	if(energy < 20) {
 		alert("energia insufficiente");
+		document.getElementById("testa").value=0;
 		return;
 	}
 	energy = energy -20;
@@ -61,6 +62,7 @@ function cambiaT(){
 function cambiaB(){
 	if(energy < 35) {
 		alert("energia insufficiente");
+		document.getElementById("busto").value=0;
 		return;
 	}
 	energy = energy -35;
@@ -82,6 +84,7 @@ function cambiaB(){
 function cambiaMD(){
 	if(energy < 15) {
 		alert("energia insufficiente");
+		document.getElementById("braccioD").value=0;
 		return;
 	}
 	energy = energy -15;
@@ -103,6 +106,7 @@ function cambiaMD(){
 function cambiaMS(){
 	if(energy < 30) {
 		alert("energia insufficiente");
+		document.getElementById("braccioS").value=0;
 		return;
 	}
 	energy = energy -30;
@@ -124,6 +128,7 @@ function cambiaMS(){
 function cambiaG(){
 	if(energy < 50) {
 		alert("energia insufficiente");
+		document.getElementById("gambe").value=0;
 		return;
 	}
 	energy = energy -50;
