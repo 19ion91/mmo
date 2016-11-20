@@ -41,6 +41,7 @@ div.progress {
     width: 100%;
     height: 100%;
     background-color: blue;
+    transition: .8s;
 }
 div.lista {
     display: inline-block;
