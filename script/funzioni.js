@@ -117,6 +117,24 @@ function abilita3(){
 	$("#loadC")[0].checked = false;
 	$("#newC")[0].disabled = true;
 	$("#loadC")[0].disabled = true;
+	var time = parseInt(document.trasformF.time.value);
+	$("#timer").text(""+ time + " sec...");
+	$("#timer").slideDown();
+	setTimer(time);
+	return false;
+}
+
+function setTimer(i) {
+	setTimeout(function () {
+		$("#timer").text("" + (i-1) + " sec...");
+		if (i != 1) {
+			setTimer(i-1);
+		} else {
+			reset();
+			document.trasformF.time.value = "";
+			$("#timer").slideUp();
+		}
+	},1000);
 }
 function auraS(){
 	//document.getElementById("fiamma").src ="img/gundam/fiammaVerde.png";
@@ -187,6 +205,9 @@ function updateTotali() {
 				tot += parseInt(r.innerHTML);
 			}
 		}
+		if (t.id == "attaccoTotale" && $("#fiamma")[0].src.endsWith(".png")) {
+			tot += 200;
+		}
 		t.innerHTML = tot;
 	}
 }
@@ -220,4 +241,8 @@ function changePart(e) {
 	$("#part"+dizionario[parte].parte).attr("src", img);
 	dizionario.updateTable(parte, parseInt(valore));
 	updateTotali();
+}
+
+function saveConf() {
+	return false;
 }

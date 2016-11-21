@@ -144,85 +144,62 @@ td.rightTd {
     width: 200px;
 }
 
-#secNumber {
+#time {
     width: 40px;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 div.newPart {       /* parte riguardante le skill */
-  display: inline-block;
-  margin-top: 40px;
-  margin-left: 90px;
-  float: left;
-  width: 250px;
+  margin-top: 50px;
+  width: 300px;
 }
 
-#skill1{
+.button{
   width: 150px;
+    position: relative;
+    float: right;
 }
-#skill2{
-  width: 150px;
+
+.skillDiv {
+    min-width: 300px;
+    display: inline-block;
 }
-#skill3{
-  width: 150px;
+#formDiv {
+    display: inline-block;
+    width: 300px;
 }
 #reset1{
   width: 150px;
   margin-top: 10px;
   background-color: green;
+    margin-left: 70px;
+
+}
+#nomeConf {
+    width: 80px;
 }
 #salva{
   width: 173px;
   margin-top: 10px;
 }
 
-
-/*
-#trasformButton {
-    float: right;
-    margin-right: 30px;
-}
-
-#skill2 {
-    float: right;
-    margin-right: 30px;
-}
-
-#skill1 {
-    margin-left: 30px;
-
-}
-
-.right-form {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.formItem {
-    display: table;
+#timer {
+    font-size: 16px;
+    text-align: center;
     margin: 0 auto;
-}
-
-#formDesc {
-    font-size: 14px;
+    margin-top: 10px;
     background: red;
+    width: 60px;
+    border-radius: 4px;
 }
-
-.radioN {
-    position: relative;
-    float: left;
-}
-
-.radioL {
-    position: relative;
-    float: right;
-}*/
 
 div.radioC {
   margin-top:50px;
   margin-bottom: 10px;
 }
-
+#apriConf {
+    float: right;
+}
 div.configurazioni{
   display: inline-block;
   float: left;

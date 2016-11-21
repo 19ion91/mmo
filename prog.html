@@ -178,14 +178,20 @@
 
         <div class="newPart">                    <!-- newPart -->
 
-          <div>
-            <input type="button" id="skill1" value="aura" onclick="auraS()";></input>
+          <div class="skillDiv">
+            <input class="button" type="button" id="skill1" value="aura" onclick="auraS()";></input>
           </div>
+          <div class="skillDiv">
+            <input class="button" type="button" id="skill2" value="invisibilita" onclick="invisibile();"></input>
+        </div class="skillDiv">
           <div>
-            <input type="button" id="skill2" value="invisibilita" onclick="invisibile();"></input>
-          </div>
-          <div>
-            <input type="button" id="skill3"  value="trasformazione" onclick="abilita3();"></input>
+            <div id="timer"></div>
+            <div id="formDiv">
+                <form  name="trasformF" onsubmit="return abilita3();">
+                    <input type="number" id="time" min="1" max="5" required></input>
+                    <input class="button" type="submit" id="skill3"  value="trasformazione"></input>
+                </form>
+            </div>
           </div>
           <div>
             <input type="button" id="reset1"  value="reset" onclick="reset();"></input>
@@ -193,7 +199,7 @@
 
         </div>                               <!-- fine  newPart -->
 
-        <form class="myForm" id="myForm">
+        <form name="myForm" id="myForm" onsubmit="return saveConf();">
           <div class="configurazioni">  <!-- configurazioni ------------------>
 
             <div class="radioC">
@@ -202,9 +208,8 @@
             </div>
 
             <div id="newConfDiv" style="display: none;">
-              <input type="text" id="nomeConf" size="20" maxlength="10" placeholder="Nome della configurazione" required>
-              </br>
-              <input type="Submit" id="salva" value="Salva la configurazione">
+              <input type="text" id="nomeConf" maxlength="10" placeholder="Nome conf." required>
+              <input type="submit" id="salva" value="Salva la configurazione">
             </div>
 
             <div id="apriConf" style="display: none;">
