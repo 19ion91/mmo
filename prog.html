@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="img/a123.png" type="image/gif" sizes="32x32">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
     <script type="text/JavaScript" src="./script/funzioni.js"></script>
 </head>
 
@@ -30,7 +31,7 @@
           <div class ="lista">
             <div class="partName">Testa</div>
             <div class="partList">
-                <select id="testa" onchange = "cambiaT();">
+                <select id="testa" form="myForm">
                 <option value="0"></option>
                 <option value="1">Blu</option>
                 <option value="2">Rosso</option>
@@ -41,7 +42,7 @@
             </div>
             <div class="partName">Busto</div>
             <div class="partList">
-                <select id="busto" onchange = "cambiaB();">
+                <select id="busto" form="myForm">
                 <option value="0"></option>
                 <option value="1">Blu</option>
                 <option value="2">Rosso</option>
@@ -53,7 +54,7 @@
 
             <div class="partName">Braccio destro</div>
             <div class="partList">
-                <select id="braccioD" onchange = "cambiaMD();">
+                <select id="braccioD" form="myForm">
                 <option value="0"></option>
                 <option value="1">Blu</option>
                 <option value="2">Rosso</option>
@@ -65,7 +66,7 @@
 
             <div class="partName">Braccio sinistro</div>
             <div class="partList">
-                <select id="braccioS" onchange = "cambiaMS();">
+                <select id="braccioS" form="myForm">
                   <option value="0"></option>
                   <option value="1">Blu</option>
                   <option value="2">Rosso</option>
@@ -77,7 +78,7 @@
 
             <div class="partName">Gambe</div>
             <div class="partList">
-                <select id="gambe" onchange = "cambiaG();">
+                <select id="gambe" form="myForm">
                   <option value="0"></option>
                   <option value="1">Blu</option>
                   <option value="2">Rosso</option>
@@ -95,7 +96,6 @@
             <p id="etichetta3"> --- </p>
             <p id="etichetta4"> --- </p>
             <p id="etichetta5"> --- </p>
-            <input type="button" id="applica" value = "APPLICA" onclick="applica();"></input>
           </div>
 
       </div>
@@ -129,95 +129,100 @@
                   <th>G<br>A<br>M<br>B<br>E
                   <th>T<br>O<br>T<br>A<br>L
                 <tr>
-                    <th class="nomeAtr">Attacco</td>
-                    <td class="rightTd" id="attacco" style="background-color:blue;">100</td>
+                    <th class="nomeAtr">Attacco</th>
+                    <td class="base" id="attacco" style="background-color:blue;">100</td>
                     <td class="rightTd" id="attaccoMtesta">-</td>
                     <td class="rightTd" id="attaccoMbusto">-</td>
                     <td class="rightTd" id="attaccoMbraccioSX">-</td>
                     <td class="rightTd" id="attaccoMbraccioDX">-</td>
                     <td class="rightTd" id="attaccoMgambe">-</td>
-                    <td class="rightTd" id="attaccoTotale" style="background-color:red;">100</td>
+                    <td class="totale" id="attaccoTotale" style="background-color:red;">100</td>
                 <tr>
-                    <th class="nomeAtr">Difesa</td>
-                    <td class="rightTd" id="difesa" style="background-color:blue;">100</td>
+                    <th class="nomeAtr">Difesa</th>
+                    <td class="base" id="difesa" style="background-color:blue;">100</td>
                     <td class="rightTd" id="difesaMtesta">-</td>
                     <td class="rightTd" id="difesaMbusto">-</td>
                     <td class="rightTd" id="difesaMbraccioSX">-</td>
                     <td class="rightTd" id="difesaMbraccioDX">-</td>
                     <td class="rightTd" id="difesaMgambe">-</td>
-                    <td class="rightTd" id="difesaTotale" style="background-color:red;">100</td>
+                    <td class="totale" id="difesaTotale" style="background-color:red;">100</td>
                 <tr>
-                    <th class="nomeAtr">Forza</td>
-                    <td class="rightTd" id="forza" style="background-color:blue;">100</td>
+                    <th class="nomeAtr">Forza</th>
+                    <td class="base" id="forza" style="background-color:blue;">100</td>
                     <td class="rightTd" id="forzaMtesta">-</td>
                     <td class="rightTd" id="forzaMbusto">-</td>
                     <td class="rightTd" id="forzaMbraccioSX">-</td>
                     <td class="rightTd" id="forzaMbraccioDX">-</td>
                     <td class="rightTd" id="forzaMgambe">-</td>
-                    <td class="rightTd" id="forzaTotale" style="background-color:red;">100</td>
+                    <td class="totale" id="forzaTotale" style="background-color:red;">100</td>
                 <tr>
-                    <th class="nomeAtr">Intelligenza</td>
-                    <td class="rightTd" id="intel" style="background-color:blue;">100</td>
+                    <th class="nomeAtr">Intelligenza</th>
+                    <td class="base" id="intel" style="background-color:blue;">100</td>
                     <td class="rightTd" id="intelMtesta">-</td>
                     <td class="rightTd" id="intelMbusto">-</td>
                     <td class="rightTd" id="intelMbraccioSX">-</td>
                     <td class="rightTd" id="intelMbraccioDX">-</td>
                     <td class="rightTd" id="intelMgambe">-</td>
-                    <td class="rightTd" id="intelTotale" style="background-color:red;">100</td>
+                    <td class="totale" id="intelTotale" style="background-color:red;">100</td>
                 <tr>
-                    <th class="nomeAtr">Raggio</td>
-                    <td class="rightTd" id="raggio" style="background-color:blue;">100</td>
+                    <th class="nomeAtr">Raggio</th>
+                    <td class="base" id="raggio" style="background-color:blue;">100</td>
                     <td class="rightTd" id="raggioMtesta">-</td>
                     <td class="rightTd" id="raggioMbusto">-</td>
                     <td class="rightTd" id="raggioMbraccioSX">-</td>
                     <td class="rightTd" id="raggioMbraccioDX">-</td>
                     <td class="rightTd" id="raggioMgambe">-</td>
-                    <td class="rightTd" id="raggioTotale" style="background-color:red;">100</td>
+                    <td class="totale" id="raggioTotale" style="background-color:red;">100</td>
             </table>
         </div>
 
         <div class="newPart">                    <!-- newPart -->
 
+          <div class="skillDiv">
+            <input class="button" type="button" id="skill1" value="Aura" onclick="auraS()";></input>
+          </div>
+          <div class="skillDiv">
+            <input class="button" type="button" id="skill2" value="Invisibilita" onclick="invisibile();"></input>
+        </div class="skillDiv">
           <div>
-            <input type="button" id="skill1" value = "aura" onclick = "auraS()";></input>
+            <div id="timer"></div>
+            <div id="formDiv">
+                <form  name="trasformF" onsubmit="return abilita3();">
+                    <input type="number" id="time" min="1" max="5" required></input>
+                    <input class="button" type="submit" id="skill3"  value="Trasformazione"></input>
+                </form>
+            </div>
           </div>
           <div>
-            <input type="button" id="skill2" value = "invisibilita" onclick = "invisibile();"></input>
-          </div>
-          <div>
-            <input type="button" id="skill3"  value = "trasformazione" onclick = "abilita3();"></input>
-          </div>
-          <div>
-            <input type="button" id="reset1"  value = "reset" onclick = "reset();"></input>
+            <input type="button" id="reset1"  value="reset" onclick="reset();"></input>
           </div>
 
         </div>                               <!-- fine  newPart -->
 
+        <form name="myForm" id="myForm" onsubmit="return saveConf();">
           <div class="configurazioni">  <!-- configurazioni ------------------>
 
             <div class="radioC">
-              <input type="radio" name="radioP" value="newConf"  onChange="newC();">Nuova Conf&nbsp;&nbsp;&nbsp;
-              <input type="radio" name="radioP" value="loadConf" onChange="apriC();">Carica Conf
+              <input id="newC" type="radio" name="radioP" value="newConf">Nuova Conf&nbsp;&nbsp;&nbsp;
+              <input id="loadC" type="radio" name="radioP" value="loadConf">Carica Conf
             </div>
 
-            <div id="newConf" style="display: none;">
-              <input type="text" id="nomeConf" size="20" maxlength="10" placeholder="Nome della configurazione">
-              </br>
-              <input type="Submit" id="salva" value="Salva la configurazione">
+            <div id="newConfDiv" style="display: none;">
+              <input type="text" id="nomeConf" maxlength="10" placeholder="Nome conf." required>
+              <input type="submit" id="salva" value="Salva la configurazione">
             </div>
 
             <div id="apriConf" style="display: none;">
               <select id="confList" name="confList" >
-                <option value="nessuna">Nessuna conf salvata</option>
               </select>
             </div>
-
-          </div>       <!-- fine configurazioni ------------------------->
+                </div>       <!-- fine configurazioni ------------------------->
+        </form>
 
       </div>    <!-- fine Right ------------------------------------------>
 
     </div>  <!-- fine Part ------------------------------------------>
-
+    <div id="notification"></div>
   </body>
 
 </html>
