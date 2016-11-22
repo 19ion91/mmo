@@ -100,7 +100,8 @@ function abilita3(){
 		alert("Energia insufficiente!");
 		return false;
 	}
-	prog.width("0%");
+	energia = 0;
+	prog.width(energia + "%");
 	for (let p of $("img[id^="+"part"+"]"))
 		p.src = "";
 	document.getElementById("fiamma").src ="";
@@ -225,8 +226,20 @@ $(window).on('load', function () {
 	$("#loadC").on("change", apriC);
 	$("#confList").on("change", putC)
 	reset();
+	rigeneraEnergia();
 });
 
+function rigeneraEnergia() {
+	setTimeout(function () {
+		if (energia < 97) {
+			energia +=3;
+		} else {
+			energia = 100;
+		}
+		$("#progress-energia").width(energia + "%");
+		rigeneraEnergia();
+	},1000);
+}
 function updateTotali() {
 	for (let t of $(".totale")) {
 		var tot = 0;
@@ -262,6 +275,7 @@ function changePart(e) {
 				dizionario[parte].diff_energ = dizionario[parte].energy;
 			}
 		}
+	energia = (energia > 100 ? 100 : energia);
 	prog.width(energia + "%");
 	var img = "./img/gundam/" + parte + colore[valore] + ".png";
 	img = img.replace("busto", "corpo");
