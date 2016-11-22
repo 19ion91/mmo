@@ -1,4 +1,5 @@
 var colore = ["", "B", "R", "N", "V", "O"];
+var energia = 100;
 var dizionario = {
 	testa : {
 		"valori": [
@@ -95,12 +96,10 @@ var dizionario = {
 
 function abilita3(){
 	var prog = $("#progress-energia");
-	var eng = prog.width()*0.4;
-	if(eng < 100) {
-		alert("energia insufficiente");
-		return;
+	if(energia < 100) {
+		alert("Energia insufficiente!");
+		return false;
 	}
-	reset();
 	prog.width("0%");
 	for (let p of $("img[id^="+"part"+"]"))
 		p.src = "";
@@ -110,6 +109,7 @@ function abilita3(){
 		s.disabled = true;
 	document.getElementById("skill1").disabled=true;
 	document.getElementById("skill2").disabled=true;
+	document.getElementById("skill3").disabled=true;
 	document.getElementById("center").style.opacity="1";
 	for (let t of $(".totale"))
 		t.innerHTML = "999";
@@ -173,27 +173,57 @@ function reset(){
 	document.getElementById("center").style.opacity="1";
 	document.getElementById("skill1").disabled=false;
 	document.getElementById("skill2").disabled=false;
-	document.getElementById("progress-energia").style.width=100+'%';
+	document.getElementById("skill3").disabled=false;
 	$("#newC")[0].disabled = false;
 	$("#loadC")[0].disabled = false;
 	$("#newC")[0].checked = false;
 	$("#loadC")[0].checked = false;
+	$("#nomeConf").val("");
 }
 
 function newC(){
-	$("#newConfDiv").slideDown();
 	$("#apriConf").slideUp();
+	$("#newConfDiv").slideDown();
 }
 
 function apriC(){
 	$("#newConfDiv").slideUp();
-	$("#apriConf").slideDown();
+	$("select[id=confList] option").remove();
+	var op = "<option value=nome>nome</option>"
+	$("#confList").append('<option value="nessuna">')
+	for (var i = 0; i < localStorage.length; i++) {
+		var nome = localStorage.key(i);
+		$("#confList").append(op.split("nome").join(nome));
+	}
+	if (localStorage.length == 0) {
+		$("#notification").text("Non ci sono configurazioni salvate.");
+		$("#notification").slideDown(600);
+		setTimeout(function () {
+			$("#notification").slideUp(600);
+			},3500);
+	} else {
+		$("#apriConf").slideDown();
+	}
 }
 
+function putC() {
+	var nome = document.myForm.confList.value;
+	if (nome == "nessuna") {
+		return;
+	}
+	var conf = JSON.parse(localStorage.getItem(nome));
+	energia = 100;
+	for (let o of $("div[class=partList] select")) {
+		o.value = conf[o.id];
+		dizionario[o.id].diff_energ = 0;
+		$("#"+o.id).trigger("change");
+	}
+}
 $(window).on('load', function () {
-	$("select").change(this, changePart);
+	$("div[class=partList] select").change(this, changePart);
 	$("#newC").on("change", newC);
 	$("#loadC").on("change", apriC);
+	$("#confList").on("change", putC)
 	reset();
 });
 
@@ -215,25 +245,24 @@ function changePart(e) {
 	var parte = e.target.id;
 	var valore = e.target.value;
 	var prog = $("#progress-energia");
-	var eng = prog.width()*0.4;
 	if (valore == 0) {
 		if (dizionario[parte].diff_energ != 0){
-			var tot = eng + dizionario[parte].diff_energ + "%";
-			prog.width(tot);
+			energia += dizionario[parte].diff_energ;
 			dizionario[parte].diff_energ = 0;
 		}
 	}
 	else if(dizionario[parte].diff_energ == 0) {
-			if (eng < dizionario[parte].energy) {
-				alert("Energia insufficiente");
+			if (energia < dizionario[parte].energy) {
+				alert("Energia insufficiente!");
 				e.target.value = "0";
 				return;
 			}
 			else {
-				prog.width(eng - dizionario[parte].energy + "%");
+				energia -= dizionario[parte].energy;
 				dizionario[parte].diff_energ = dizionario[parte].energy;
 			}
 		}
+	prog.width(energia + "%");
 	var img = "./img/gundam/" + parte + colore[valore] + ".png";
 	img = img.replace("busto", "corpo");
 	img = img.replace("braccio", "mano");
@@ -244,5 +273,19 @@ function changePart(e) {
 }
 
 function saveConf() {
+	var nome = document.myForm.nomeConf.value;
+	var valori = ["{"];
+	for (let o of $("div[class=partList] select")) {
+		valori.push('"' + o.id + '":"' + o.value + '",');
+	}
+	valori = valori.join("");
+	valori = valori.slice(0, -1) + "}";
+	localStorage.setItem(nome, valori);
+	$("#notification").text("La configurazione è stata salvata con successo.");
+	$("#notification").slideDown(600);
+	setTimeout(function () {
+		$("#notification").slideUp(600);
+	},3500);
+	reset();
 	return false;
 }
