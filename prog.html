@@ -1,157 +1,228 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
+  <title>RoboT</title>
     <meta charset="utf-8">
     <link rel="icon" href="img/a123.png" type="image/gif" sizes="32x32">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script type="text/JavaScript" language="JavaScript" src="./script/jquery-3.1.1.min.js"></script>
-    <script type="text/JavaScript" language="JavaScript" src="./script/funzioni.js"></script>
+    <script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
+    <script type="text/JavaScript" src="./script/funzioni.js"></script>
 </head>
 
-<body>
-    <div class="part">
-        <div class="left">
-            <div class="descVE">Vita</div>
+  <body>
+    <div class = "part">
+      <div class ="left">
+          <div class = "vita_energia">
+            <div name = "vita">Vita</div>
+            <div class = "progress">
+              <div id="progress-vita">
+                  <!--in caso mettere testo-->
+            </div>
+            </div>
+            <div name = "energia">Energia</div>
             <div class="progress">
-                <div id="progress-vita">
-                    <!--in caso mettere testo-->
-                </div>
+              <div id="progress-energia">
+              <!--in caso mettere testo-->
             </div>
-            <div class="descVE">Energia</div>
-            <div class="progress">
-                <div id="progress-energ">
-                    <!--in caso mettere testo-->
-                </div>
             </div>
-            <div class="lista">
-                <div class="partName">Testa</div>
-                <div class="partList">
-                    <select id="testa" onchange="cambiaT();" form="myForm">
-                        <option value="0"></option>
-                        <option class="atr" value="1">Blu</option>
-                        <option class="atr" value="2">Rosso</option>
-                        <option class="atr" value="3">Nero</option>
-                        <option class="atr" value="4">Verde</option>
-                        <option class="atr" value="5">Pro</option>
-                    </select>
-                </div>
-                <div class="partName">Busto</div>
-                <div class="partList">
-                    <select id="busto" onchange="cambiaB();">
-                        <option value="0"></option>
-                        <option class="atr" value="1">Blu</option>
-                        <option class="atr" value="2">Rosso</option>
-                        <option class="atr" value="3">Nero</option>
-                        <option class="atr" value="4">Verde</option>
-                        <option class="atr" value="5">Pro</option>
-                    </select>
-                </div>
-                <div class="partName">Braccio destro</div>
-                <div class="partList">
-                    <select id="braccioD" onchange="cambiaMD();">
-                        <option value="0"></option>
-                        <option class="atr" value="1">Blu</option>
-                        <option class="atr" value="2">Rosso</option>
-                        <option class="atr" value="3">Nero</option>
-                        <option class="atr" value="4">Verde</option>
-                        <option class="atr" value="5">Pro</option>
-                    </select>
-                </div>
-                <div class="partName">Braccio sinistro</div>
-                <div class="partList">
-                    <select id="braccioS" onchange="cambiaMS();">
-                        <option value="0"></option>
-                        <option class="atr" value="1">Blu</option>
-                        <option class="atr" value="2">Rosso</option>
-                        <option class="atr" value="3">Nero</option>
-                        <option class="atr" value="4">Verde</option>
-                        <option class="atr" value="5">Pro</option>
-                    </select>
-                </div>
-                <div class="partName">Gambe</div>
-                <div class="partList">
-                    <select id="gambe" onchange="cambiaG();">
-                        <option value="0"></option>
-                        <option class="atr" value="1">Blu</option>
-                        <option class="atr" value="2">Rosso</option>
-                        <option class="atr" value="3">Nero</option>
-                        <option class="atr" value="4">Verde</option>
-                        <option class="atr" value="5">Pro</option>
-                    </select>
-                </div>
-            </div>
-            <div id="desc">Qui ci va la descrizione</div>
-        </div>
-        <!-- sinistra finisce qui-->
+          </div>
 
-        <!-- centro inizia qui-->
-        <div class="center" id="center">
-            <img class="immagine" id="part1" src="img/gundam/testa.png">
-            <img class="immagine" id="part2" src="img/gundam/corpo.png">
-            <img class="immagine" id="part3" src="img/gundam/manoD.png">
-            <img class="immagine" id="part4" src="img/gundam/manoS.png">
-            <img class="immagine" id="part5" src="img/gundam/gambe.png">
-            <img class="immagine" id="fiamma" src="">
-            <img class="immagine" id="trasform" src="">
-        </div>
-        <!-- centro finisce qui-->
-
-        <!-- destra inizia qui-->
-        <div class="right">
-            <div class="right-table">
-                <table class="table">
-                    <tr>
-                        <td id="nomeAtr">Attacco</td>
-                        <td class="rightTd" id="valAtr">100</td>
-                    <tr>
-                        <td id="nomeAtr">Diffesa</td>
-                        <td class="rightTd" id="valAtr">100</td>
-                    <tr>
-                        <td id="nomeAtr">Forza</td>
-                        <td class="rightTd" id="valAtr">100</td>
-                    <tr>
-                        <td id="nomeAtr">Intelligenza</td>
-                        <td class="rightTd" id="valAtr">100</td>
-                    <tr>
-                        <td id="nomeAtr">Raggio</td>
-                        <td class="rightTd" id="valAtr">100</td>
-                </table>
+          <div class ="lista">
+            <div class="partName">Testa</div>
+            <div class="partList">
+                <select id="testa" form="myForm">
+                <option value="0"></option>
+                <option value="1">Blu</option>
+                <option value="2">Rosso</option>
+                <option value="3">Nero</option>
+                <option value="4">Verde</option>
+                <option value="5">Pro</option>
+                </select>
             </div>
-            <div class="right-skill">
-                <div class="right-cont">
-                    <button id="skill1" onclick="auraS();">Aura</button>
-                    <button id="skill2" onclick="invisibile();">Invisibilità</button>
-                </div>
-                <form name="trasformazione" >
-                    <div class="right-cont">
-                        <div id="secDesc">La durata in secondi</div>
-                        <input type="number" id="secNumber" min="1" max="5" required="true">
-                        <input type="submit" id="trasformButton" value="Trasforma">
-                    </div>
+            <div class="partName">Busto</div>
+            <div class="partList">
+                <select id="busto" form="myForm">
+                <option value="0"></option>
+                <option value="1">Blu</option>
+                <option value="2">Rosso</option>
+                <option value="3">Nero</option>
+                <option value="4">Verde</option>
+                <option value="5">Pro</option>
+                </select>
+            </div>
+
+            <div class="partName">Braccio destro</div>
+            <div class="partList">
+                <select id="braccioD" form="myForm">
+                <option value="0"></option>
+                <option value="1">Blu</option>
+                <option value="2">Rosso</option>
+                <option value="3">Nero</option>
+                <option value="4">Verde</option>
+                <option value="5">Pro</option>
+                </select>
+            </div>
+
+            <div class="partName">Braccio sinistro</div>
+            <div class="partList">
+                <select id="braccioS" form="myForm">
+                  <option value="0"></option>
+                  <option value="1">Blu</option>
+                  <option value="2">Rosso</option>
+                  <option value="3">Nero</option>
+                  <option value="4">Verde</option>
+                  <option value="5">Pro</option>
+                </select>
+            </div>
+
+            <div class="partName">Gambe</div>
+            <div class="partList">
+                <select id="gambe" form="myForm">
+                  <option value="0"></option>
+                  <option value="1">Blu</option>
+                  <option value="2">Rosso</option>
+                  <option value="3">Nero</option>
+                  <option value="4">Verde</option>
+                  <option value="5">Pro</option>
+                </select>
+            </div>
+
+          </div>
+<!--- modificata parte descrizione -->
+          <div id="desc">
+            <p id="etichetta1"> --- </p>
+            <p id="etichetta2"> --- </p>
+            <p id="etichetta3"> --- </p>
+            <p id="etichetta4"> --- </p>
+            <p id="etichetta5"> --- </p>
+          </div>
+
+      </div>
+
+<!-- sinistra finisce qui ------------------------------------------------->
+
+<!-- centro inizia qui-->
+        <div class = "center" id = "center" >
+          <img class="immagine" id= "part1" src = "img/gundam/testa.png" >
+          <img class="immagine" id= "part2" src = "img/gundam/corpo.png">
+          <img class="immagine" id= "part3" src = "img/gundam/manoD.png" >
+          <img class="immagine" id= "part4" src = "img/gundam/manoS.png" >
+          <img class="immagine" id= "part5" src = "img/gundam/gambe.png">
+          <img class="immagine" id="fiamma" src="">
+          <img class="immagine" id="trasform" src="">
+      </div>
+<!-- centro finisce qui ---------------------------------------------------->
+
+<!-- destra inizia qui-->
+
+      <div class = "right">
+        <div class="right-table">
+            <table class="table" border="1">
+              <thead>
+                <td>
+                  <th>B<br>A<br>S<br>E
+                  <th>T<br>E<br>S<br>T<br>A
+                  <th>B<br>U<br>S<br>T<br>0
+                  <th>B<br>R<br>A<br>S<br>X
+                  <th>B<br>R<br>A<br>D<br>X
+                  <th>G<br>A<br>M<br>B<br>E
+                  <th>T<br>O<br>T<br>A<br>L
+                <tr>
+                    <th class="nomeAtr">Attacco</th>
+                    <td class="base" id="attacco" style="background-color:blue;">100</td>
+                    <td class="rightTd" id="attaccoMtesta">-</td>
+                    <td class="rightTd" id="attaccoMbusto">-</td>
+                    <td class="rightTd" id="attaccoMbraccioSX">-</td>
+                    <td class="rightTd" id="attaccoMbraccioDX">-</td>
+                    <td class="rightTd" id="attaccoMgambe">-</td>
+                    <td class="totale" id="attaccoTotale" style="background-color:red;">100</td>
+                <tr>
+                    <th class="nomeAtr">Difesa</th>
+                    <td class="base" id="difesa" style="background-color:blue;">100</td>
+                    <td class="rightTd" id="difesaMtesta">-</td>
+                    <td class="rightTd" id="difesaMbusto">-</td>
+                    <td class="rightTd" id="difesaMbraccioSX">-</td>
+                    <td class="rightTd" id="difesaMbraccioDX">-</td>
+                    <td class="rightTd" id="difesaMgambe">-</td>
+                    <td class="totale" id="difesaTotale" style="background-color:red;">100</td>
+                <tr>
+                    <th class="nomeAtr">Forza</th>
+                    <td class="base" id="forza" style="background-color:blue;">100</td>
+                    <td class="rightTd" id="forzaMtesta">-</td>
+                    <td class="rightTd" id="forzaMbusto">-</td>
+                    <td class="rightTd" id="forzaMbraccioSX">-</td>
+                    <td class="rightTd" id="forzaMbraccioDX">-</td>
+                    <td class="rightTd" id="forzaMgambe">-</td>
+                    <td class="totale" id="forzaTotale" style="background-color:red;">100</td>
+                <tr>
+                    <th class="nomeAtr">Intelligenza</th>
+                    <td class="base" id="intel" style="background-color:blue;">100</td>
+                    <td class="rightTd" id="intelMtesta">-</td>
+                    <td class="rightTd" id="intelMbusto">-</td>
+                    <td class="rightTd" id="intelMbraccioSX">-</td>
+                    <td class="rightTd" id="intelMbraccioDX">-</td>
+                    <td class="rightTd" id="intelMgambe">-</td>
+                    <td class="totale" id="intelTotale" style="background-color:red;">100</td>
+                <tr>
+                    <th class="nomeAtr">Raggio</th>
+                    <td class="base" id="raggio" style="background-color:blue;">100</td>
+                    <td class="rightTd" id="raggioMtesta">-</td>
+                    <td class="rightTd" id="raggioMbusto">-</td>
+                    <td class="rightTd" id="raggioMbraccioSX">-</td>
+                    <td class="rightTd" id="raggioMbraccioDX">-</td>
+                    <td class="rightTd" id="raggioMgambe">-</td>
+                    <td class="totale" id="raggioTotale" style="background-color:red;">100</td>
+            </table>
+        </div>
+
+        <div class="newPart">                    <!-- newPart -->
+
+          <div class="skillDiv">
+            <input class="button" type="button" id="skill1" value="Aura" onclick="auraS()";></input>
+          </div>
+          <div class="skillDiv">
+            <input class="button" type="button" id="skill2" value="Invisibilita" onclick="invisibile();"></input>
+        </div class="skillDiv">
+          <div>
+            <div id="timer"></div>
+            <div id="formDiv">
+                <form  name="trasformF" onsubmit="return abilita3();">
+                    <input type="number" id="time" min="1" max="5" required></input>
+                    <input class="button" type="submit" id="skill3"  value="Trasformazione"></input>
                 </form>
             </div>
-            <div class="right-form">
-                <form name="myForm">
-                    <div class="right-cont">
-                        <div class="radioN">
-                            <input type="radio" name="radioP" id="radioN" value="newConf">Nuova Conf
-                        </div>
-                        <div class="radioL">
-                            <input type="radio" name="radioP" id="radioL" value="loadConf">Carica Conf
-                        </div>
-                    </div>
-                    <div class="formItem" id="formDesc">Il nome della configurazione</div>
-                    <div class="formItem" id="formNome">
-                        <input type="text" size="10" maxlength="10" placeholder="Scrivi qui" id="nomeConf" required="true">
-                    </div>
-                    <div class="formItem" id="formButtonDiv">
-                        <input type="Submit" id="formButton" value="Salva la configurazione">
-                    </div>
-                </form>
+          </div>
+          <div>
+            <input type="button" id="reset1"  value="reset" onclick="reset();"></input>
+          </div>
+
+        </div>                               <!-- fine  newPart -->
+
+        <form name="myForm" id="myForm" onsubmit="return saveConf();">
+          <div class="configurazioni">  <!-- configurazioni ------------------>
+
+            <div class="radioC">
+              <input id="newC" type="radio" name="radioP" value="newConf">Nuova Conf&nbsp;&nbsp;&nbsp;
+              <input id="loadC" type="radio" name="radioP" value="loadConf">Carica Conf
             </div>
-        </div>
-    </div>
-</body>
+
+            <div id="newConfDiv" style="display: none;">
+              <input type="text" id="nomeConf" maxlength="10" placeholder="Nome conf." required>
+              <input type="submit" id="salva" value="Salva la configurazione">
+            </div>
+
+            <div id="apriConf" style="display: none;">
+              <select id="confList" name="confList" >
+              </select>
+            </div>
+                </div>       <!-- fine configurazioni ------------------------->
+        </form>
+
+      </div>    <!-- fine Right ------------------------------------------>
+
+    </div>  <!-- fine Part ------------------------------------------>
+    <div id="notification"></div>
+  </body>
 
 </html>
