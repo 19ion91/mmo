@@ -3,226 +3,214 @@
 <html>
 <head>
   <title>RoboT</title>
-    <meta charset="utf-8">
-    <link rel="icon" href="img/a123.png" type="image/gif" sizes="32x32">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
-    <script type="text/JavaScript" src="./script/funzioni.js"></script>
+  <meta charset="utf-8">
+  <link rel="icon" href="img/a123.png" type="image/gif">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
+  <script type="text/JavaScript" src="./script/funzioni.js"></script>
 </head>
 
-  <body>
-    <div class = "part">
-      <div class ="left">
-          <div class = "vita_energia">
-            <div name = "vita">Vita</div>
-            <div class = "progress">
-              <div id="progress-vita">
-                  <!--in caso mettere testo-->
-            </div>
-            </div>
-            <div name = "energia">Energia</div>
-            <div class="progress">
-              <div id="progress-energia">
-              <!--in caso mettere testo-->
-            </div>
-            </div>
-          </div>
-
-          <div class ="lista">
-            <div class="partName">Testa</div>
-            <div class="partList">
-                <select id="testa" form="myForm">
-                <option value="0"></option>
-                <option value="1">Blu</option>
-                <option value="2">Rosso</option>
-                <option value="3">Nero</option>
-                <option value="4">Verde</option>
-                <option value="5">Pro</option>
-                </select>
-            </div>
-            <div class="partName">Busto</div>
-            <div class="partList">
-                <select id="busto" form="myForm">
-                <option value="0"></option>
-                <option value="1">Blu</option>
-                <option value="2">Rosso</option>
-                <option value="3">Nero</option>
-                <option value="4">Verde</option>
-                <option value="5">Pro</option>
-                </select>
-            </div>
-
-            <div class="partName">Braccio destro</div>
-            <div class="partList">
-                <select id="braccioD" form="myForm">
-                <option value="0"></option>
-                <option value="1">Blu</option>
-                <option value="2">Rosso</option>
-                <option value="3">Nero</option>
-                <option value="4">Verde</option>
-                <option value="5">Pro</option>
-                </select>
-            </div>
-
-            <div class="partName">Braccio sinistro</div>
-            <div class="partList">
-                <select id="braccioS" form="myForm">
-                  <option value="0"></option>
-                  <option value="1">Blu</option>
-                  <option value="2">Rosso</option>
-                  <option value="3">Nero</option>
-                  <option value="4">Verde</option>
-                  <option value="5">Pro</option>
-                </select>
-            </div>
-
-            <div class="partName">Gambe</div>
-            <div class="partList">
-                <select id="gambe" form="myForm">
-                  <option value="0"></option>
-                  <option value="1">Blu</option>
-                  <option value="2">Rosso</option>
-                  <option value="3">Nero</option>
-                  <option value="4">Verde</option>
-                  <option value="5">Pro</option>
-                </select>
-            </div>
-
-          </div>
-<!--- modificata parte descrizione -->
-          <div id="desc">
-            <p id="etichetta1"> --- </p>
-            <p id="etichetta2"> --- </p>
-            <p id="etichetta3"> --- </p>
-            <p id="etichetta4"> --- </p>
-            <p id="etichetta5"> --- </p>
-          </div>
-
+<body>
+  <div class="part">
+    <div class="left">
+      <div class="vita_energia">
+        <div class="vita">Vita</div>
+        <div class="progress">
+          <div id="progress-vita"></div>
+        </div>
+        <div class="energia">Energia</div>
+        <div class="progress">
+          <div id="progress-energia"></div>
+        </div>
       </div>
 
-<!-- sinistra finisce qui ------------------------------------------------->
-
-<!-- centro inizia qui-->
-        <div class = "center" id = "center" >
-          <img class="immagine" id= "part1" src = "img/gundam/testa.png" >
-          <img class="immagine" id= "part2" src = "img/gundam/corpo.png">
-          <img class="immagine" id= "part3" src = "img/gundam/manoD.png" >
-          <img class="immagine" id= "part4" src = "img/gundam/manoS.png" >
-          <img class="immagine" id= "part5" src = "img/gundam/gambe.png">
-          <img class="immagine" id="fiamma" src="">
-          <img class="immagine" id="trasform" src="">
-      </div>
-<!-- centro finisce qui ---------------------------------------------------->
-
-<!-- destra inizia qui-->
-
-      <div class = "right">
-        <div class="right-table">
-            <table class="table" border="1">
-              <thead>
-                <td>
-                  <th>B<br>A<br>S<br>E
-                  <th>T<br>E<br>S<br>T<br>A
-                  <th>B<br>U<br>S<br>T<br>0
-                  <th>B<br>R<br>A<br>S<br>X
-                  <th>B<br>R<br>A<br>D<br>X
-                  <th>G<br>A<br>M<br>B<br>E
-                  <th>T<br>O<br>T<br>A<br>L
-                <tr>
-                    <th class="nomeAtr">Attacco</th>
-                    <td class="base" id="attacco" style="background-color:blue;">100</td>
-                    <td class="rightTd" id="attaccoMtesta">-</td>
-                    <td class="rightTd" id="attaccoMbusto">-</td>
-                    <td class="rightTd" id="attaccoMbraccioSX">-</td>
-                    <td class="rightTd" id="attaccoMbraccioDX">-</td>
-                    <td class="rightTd" id="attaccoMgambe">-</td>
-                    <td class="totale" id="attaccoTotale" style="background-color:red;">100</td>
-                <tr>
-                    <th class="nomeAtr">Difesa</th>
-                    <td class="base" id="difesa" style="background-color:blue;">100</td>
-                    <td class="rightTd" id="difesaMtesta">-</td>
-                    <td class="rightTd" id="difesaMbusto">-</td>
-                    <td class="rightTd" id="difesaMbraccioSX">-</td>
-                    <td class="rightTd" id="difesaMbraccioDX">-</td>
-                    <td class="rightTd" id="difesaMgambe">-</td>
-                    <td class="totale" id="difesaTotale" style="background-color:red;">100</td>
-                <tr>
-                    <th class="nomeAtr">Forza</th>
-                    <td class="base" id="forza" style="background-color:blue;">100</td>
-                    <td class="rightTd" id="forzaMtesta">-</td>
-                    <td class="rightTd" id="forzaMbusto">-</td>
-                    <td class="rightTd" id="forzaMbraccioSX">-</td>
-                    <td class="rightTd" id="forzaMbraccioDX">-</td>
-                    <td class="rightTd" id="forzaMgambe">-</td>
-                    <td class="totale" id="forzaTotale" style="background-color:red;">100</td>
-                <tr>
-                    <th class="nomeAtr">Intelligenza</th>
-                    <td class="base" id="intel" style="background-color:blue;">100</td>
-                    <td class="rightTd" id="intelMtesta">-</td>
-                    <td class="rightTd" id="intelMbusto">-</td>
-                    <td class="rightTd" id="intelMbraccioSX">-</td>
-                    <td class="rightTd" id="intelMbraccioDX">-</td>
-                    <td class="rightTd" id="intelMgambe">-</td>
-                    <td class="totale" id="intelTotale" style="background-color:red;">100</td>
-                <tr>
-                    <th class="nomeAtr">Raggio</th>
-                    <td class="base" id="raggio" style="background-color:blue;">100</td>
-                    <td class="rightTd" id="raggioMtesta">-</td>
-                    <td class="rightTd" id="raggioMbusto">-</td>
-                    <td class="rightTd" id="raggioMbraccioSX">-</td>
-                    <td class="rightTd" id="raggioMbraccioDX">-</td>
-                    <td class="rightTd" id="raggioMgambe">-</td>
-                    <td class="totale" id="raggioTotale" style="background-color:red;">100</td>
-            </table>
+      <div class ="lista">
+        <div class="partName">Testa</div>
+        <div class="partList">
+          <select id="testa" form="myForm">
+            <option value="0"></option>
+            <option value="1">Blu</option>
+            <option value="2">Rosso</option>
+            <option value="3">Nero</option>
+            <option value="4">Verde</option>
+            <option value="5">Pro</option>
+          </select>
+        </div>
+        <div class="partName">Busto</div>
+        <div class="partList">
+          <select id="busto" form="myForm">
+            <option value="0"></option>
+            <option value="1">Blu</option>
+            <option value="2">Rosso</option>
+            <option value="3">Nero</option>
+            <option value="4">Verde</option>
+            <option value="5">Pro</option>
+          </select>
         </div>
 
-        <div class="newPart">                    <!-- newPart -->
+        <div class="partName">Braccio destro</div>
+        <div class="partList">
+          <select id="braccioD" form="myForm">
+            <option value="0"></option>
+            <option value="1">Blu</option>
+            <option value="2">Rosso</option>
+            <option value="3">Nero</option>
+            <option value="4">Verde</option>
+            <option value="5">Pro</option>
+          </select>
+        </div>
 
-          <div class="skillDiv">
-            <input class="button" type="button" id="skill1" value="Aura" onclick="auraS()";></input>
-          </div>
-          <div class="skillDiv">
-            <input class="button" type="button" id="skill2" value="Invisibilita" onclick="invisibile();"></input>
+        <div class="partName">Braccio sinistro</div>
+        <div class="partList">
+          <select id="braccioS" form="myForm">
+            <option value="0"></option>
+            <option value="1">Blu</option>
+            <option value="2">Rosso</option>
+            <option value="3">Nero</option>
+            <option value="4">Verde</option>
+            <option value="5">Pro</option>
+          </select>
+        </div>
+
+        <div class="partName">Gambe</div>
+        <div class="partList">
+          <select id="gambe" form="myForm">
+            <option value="0"></option>
+            <option value="1">Blu</option>
+            <option value="2">Rosso</option>
+            <option value="3">Nero</option>
+            <option value="4">Verde</option>
+            <option value="5">Pro</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="desc">
+        <p id="etichetta1"> --- </p>
+        <p id="etichetta2"> --- </p>
+        <p id="etichetta3"> --- </p>
+        <p id="etichetta4"> --- </p>
+        <p id="etichetta5"> --- </p>
+      </div>
+    </div>
+
+    <!-- sinistra finisce qui -->
+
+    <!-- centro inizia qui-->
+    <div class = "center" id = "center" >
+      <img class="immagine" id="part1" alt="immagine testa" src="./img/gundam/testa.png" >
+      <img class="immagine" id="part2" alt="immagine corpo" src="./img/gundam/corpo.png">
+      <img class="immagine" id="part3" alt="immagine braccio" src="./img/gundam/manoD.png" >
+      <img class="immagine" id="part4" alt="immagine braccio" src="./img/gundam/manoS.png" >
+      <img class="immagine" id="part5" alt="immagine gambe" src="./img/gundam/gambe.png">
+      <img class="immagine" id="fiamma" alt="immagine fiamma" src="./img/gundam/fiammaVerde2.png">
+      <img class="immagine" id="trasform" alt="immagine super" src="./img/e.png">
+    </div>
+    <!-- centro finisce qui -->
+
+    <!-- destra inizia qui-->
+    <div class = "right">
+      <div class="right-table">
+        <table class="table" border="1">
+          <tr>
+            <th>
+            <th>B<br>A<br>S<br>E
+            <th>T<br>E<br>S<br>T<br>A
+            <th>B<br>U<br>S<br>T<br>0
+            <th>B<br>R<br>A<br>S<br>X
+            <th>B<br>R<br>A<br>D<br>X
+            <th>G<br>A<br>M<br>B<br>E
+            <th>T<br>O<br>T<br>A<br>L
+          <tr>
+            <th class="nomeAtr">Attacco</th>
+            <td class="base" id="attacco">100</td>
+            <td class="rightTd" id="attaccoMtesta">-</td>
+            <td class="rightTd" id="attaccoMbusto">-</td>
+            <td class="rightTd" id="attaccoMbraccioSX">-</td>
+            <td class="rightTd" id="attaccoMbraccioDX">-</td>
+            <td class="rightTd" id="attaccoMgambe">-</td>
+            <td class="totale" id="attaccoTotale">100</td>
+          <tr>
+            <th class="nomeAtr">Difesa</th>
+            <td class="base" id="difesa">100</td>
+            <td class="rightTd" id="difesaMtesta">-</td>
+            <td class="rightTd" id="difesaMbusto">-</td>
+            <td class="rightTd" id="difesaMbraccioSX">-</td>
+            <td class="rightTd" id="difesaMbraccioDX">-</td>
+            <td class="rightTd" id="difesaMgambe">-</td>
+            <td class="totale" id="difesaTotale">100</td>
+          <tr>
+            <th class="nomeAtr">Forza</th>
+            <td class="base" id="forza">100</td>
+            <td class="rightTd" id="forzaMtesta">-</td>
+            <td class="rightTd" id="forzaMbusto">-</td>
+            <td class="rightTd" id="forzaMbraccioSX">-</td>
+            <td class="rightTd" id="forzaMbraccioDX">-</td>
+            <td class="rightTd" id="forzaMgambe">-</td>
+            <td class="totale" id="forzaTotale">100</td>
+          <tr>
+            <th class="nomeAtr">Intelligenza</th>
+            <td class="base" id="intel">100</td>
+            <td class="rightTd" id="intelMtesta">-</td>
+            <td class="rightTd" id="intelMbusto">-</td>
+            <td class="rightTd" id="intelMbraccioSX">-</td>
+            <td class="rightTd" id="intelMbraccioDX">-</td>
+            <td class="rightTd" id="intelMgambe">-</td>
+            <td class="totale" id="intelTotale">100</td>
+          <tr>
+            <th class="nomeAtr">Raggio</th>
+            <td class="base" id="raggio">100</td>
+            <td class="rightTd" id="raggioMtesta">-</td>
+            <td class="rightTd" id="raggioMbusto">-</td>
+            <td class="rightTd" id="raggioMbraccioSX">-</td>
+            <td class="rightTd" id="raggioMbraccioDX">-</td>
+            <td class="rightTd" id="raggioMgambe">-</td>
+            <td class="totale" id="raggioTotale">100</td>
+        </table>
+      </div>
+
+      <div class="newPart">                    <!-- newPart -->
+        <div class="skillDiv">
+          <input class="button" type="button" id="skill1" value="Aura" onclick="auraS();">
+        </div>
+        <div class="skillDiv">
+          <input class="button" type="button" id="skill2" value="Invisibilita" onclick="invisibile();">
         </div class="skillDiv">
-          <div>
-            <div id="timer"></div>
-            <div id="formDiv">
-                <form  name="trasformF" onsubmit="return abilita3();">
-                    <input type="number" id="time" min="1" max="5" required></input>
-                    <input class="button" type="submit" id="skill3"  value="Trasformazione"></input>
-                </form>
-            </div>
+        <div>
+          <div id="timer"></div>
+          <div id="formDiv">
+            <form  name="trasformF" onsubmit="return abilita3();">
+              <input type="number" id="time" min="1" max="5" required>
+              <input class="button" type="submit" id="skill3"  value="Trasformazione">
+            </form>
           </div>
-          <div>
-            <input type="button" id="reset1"  value="reset" onclick="reset();"></input>
+        </div>
+        <div>
+          <input type="button" id="reset1"  value="Reset" onclick="reset();">
+        </div>
+      </div>                               <!-- fine  newPart -->
+
+      <form name="myForm" id="myForm" onsubmit="return saveConf();">
+        <div class="configurazioni">  <!-- configurazioni -->
+          <div class="radioC">
+            <input id="newC" type="radio" name="radioP" value="newConf">Nuova Conf
+            <input id="loadC" type="radio" name="radioP" value="loadConf">Carica Conf
           </div>
 
-        </div>                               <!-- fine  newPart -->
+          <div id="newConfDiv" style="display: none;">
+            <input type="text" id="nomeConf" maxlength="10" placeholder="Nome conf." required>
+            <input type="submit" id="salva" value="Salva la configurazione">
+          </div>
 
-        <form name="myForm" id="myForm" onsubmit="return saveConf();">
-          <div class="configurazioni">  <!-- configurazioni ------------------>
+          <div id="apriConf" style="display: none;">
+            <select id="confList" name="confList" >
+            </select>
+          </div>
+        </div>       <!-- fine configurazioni -->
+      </form>
+    </div>    <!-- fine Right -->
 
-            <div class="radioC">
-              <input id="newC" type="radio" name="radioP" value="newConf">Nuova Conf&nbsp;&nbsp;&nbsp;
-              <input id="loadC" type="radio" name="radioP" value="loadConf">Carica Conf
-            </div>
-
-            <div id="newConfDiv" style="display: none;">
-              <input type="text" id="nomeConf" maxlength="10" placeholder="Nome conf." required>
-              <input type="submit" id="salva" value="Salva la configurazione">
-            </div>
-
-            <div id="apriConf" style="display: none;">
-              <select id="confList" name="confList" >
-              </select>
-            </div>
-                </div>       <!-- fine configurazioni ------------------------->
-        </form>
-
-      </div>    <!-- fine Right ------------------------------------------>
-
-    </div>  <!-- fine Part ------------------------------------------>
-    <div id="notification"></div>
-  </body>
-
+  </div>  <!-- fine Part -->
+  <div id="notification"></div>
+</body>
 </html>

@@ -1,20 +1,19 @@
 /*-----------------------GLOBAL----------------------------------*/
 body {
-    color: white;
-    background-image: url("../img/space1.jpg");
-    background-size: cover;
+  color: white;
+  background-image: url("../img/space1.jpg");
+  background-size: cover;
 }
 div.part {
-    display: inline-block;
-    margin-top :20px;
-    margin-left :30px;
+  display: inline-block;
+  margin-top :20px;
+  margin-left :30px;
 }
 /* -----------------------  LEFT --------------------------------- */
 div.left {
-    width: 300px;
-    float: left;
-    padding: 10px;
-    /*! margin-right: 10px; */
+  width: 300px;
+  float: left;
+  padding: 10px;
 }
 div.vita_energia{
   width: 250px;
@@ -22,51 +21,52 @@ div.vita_energia{
   margin-bottom:10px;
 }
 div.progress {
-    position: relative;
-    width: 100%;
-    height: 25px;
-    background-color: #efefef;
-    margin-bottom: 18px;
-    margin-top: 2px;
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background-color: #efefef;
+  margin-bottom: 18px;
+  margin-top: 2px;
 }
 #progress-vita {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transition: .8s;
 }
 
 #progress-energia {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-    transition: .8s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  transition: .8s;
 }
 div.lista {
-    display: inline-block;
-    width: 220px;
+  display: inline-block;
+  width: 220px;
 }
 
 div.partName {
-    float: left;
-    width: 130px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  float: left;
+  width: 130px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 div.partList {
-    float: right;
+  float: right;
 }
 
 div#desc {
-    bottom: 0px;
-    border-style: groove;
-    border-color: blue;
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.6);
+  bottom: 0px;
+  border-style: groove;
+  border-color: blue;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.6);
 }
 
 
@@ -74,18 +74,17 @@ div#desc {
 
 
 div.center {
-    width: 570px;
-    margin-top:50px;
-    /*! margin-left:50px; */
-    float: left;
-    height: 500px;
+  width: 570px;
+  margin-top:50px;
+  float: left;
+  height: 500px;
 }
 
 .immagine {
-    height: 500px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: absolute;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
 
 }
 
@@ -104,35 +103,42 @@ div.center {
 /*-----fine center-------------------------------------------------*/
 
 div.right {
-    width: 300px;
-    float: left;
-    display: inline-block;
-    margin-left: 50px;
-    margin-top: 20px;
-    position: relative;
+  width: 300px;
+  float: left;
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 20px;
+  position: relative;
 }
 
 .right-table {
-    width: 100%;
-    background: rgba(0,0,0,0.6);
+  width: 100%;
+  background: rgba(0,0,0,0.6);
 }
 
 td.rightTd {
-    width: 30px;
-    text-align: center;
+  width: 30px;
+  text-align: center;
+}
+
+td.base {
+  background-color: blue;
+}
+td.totale {
+  background-color: red;
 }
 
 #secDesc {
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 10px;
-    background: red;
-    width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: red;
+  width: 200px;
 }
 
 #time {
-    width: 40px;
-    margin-left: 50px;
+  width: 40px;
+  margin-left: 50px;
 }
 
 div.newPart {       /* parte riguardante le skill */
@@ -142,29 +148,30 @@ div.newPart {       /* parte riguardante le skill */
 
 .button{
   width: 150px;
-    position: relative;
-    float: right;
+  position: relative;
+  float: right;
 }
 .button:hover {
-    background: steelblue;
+  background: steelblue;
 }
 .skillDiv {
-    min-width: 300px;
-    display: inline-block;
+  min-width: 300px;
+  display: inline-block;
 }
 #formDiv {
-    display: inline-block;
-    width: 300px;
+  display: inline-block;
+  width: 300px;
 }
 #reset1{
   width: 150px;
   margin-top: 10px;
-  background-color: green;
-    margin-left: 70px;
-
+  margin-left: 70px;
+}
+#reset1:hover{
+  background: steelblue;
 }
 #nomeConf {
-    width: 80px;
+  width: 80px;
 }
 #salva{
   width: 173px;
@@ -172,13 +179,13 @@ div.newPart {       /* parte riguardante le skill */
 }
 
 #timer {
-    font-size: 16px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 10px;
-    background: red;
-    width: 60px;
-    border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: red;
+  width: 60px;
+  border-radius: 4px;
 }
 
 div.radioC {
@@ -186,7 +193,7 @@ div.radioC {
   margin-bottom: 10px;
 }
 #apriConf {
-    float: right;
+  float: right;
 }
 div.configurazioni{
   display: inline-block;
@@ -194,15 +201,15 @@ div.configurazioni{
   margin-left: 20px;
 }
 #notification {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    margin: 0 auto;
-    top: 20px;
-    left: 30%;
-    text-align: center;
-    background: red;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 18px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  top: 20px;
+  left: 30%;
+  text-align: center;
+  background: red;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 18px;
 }
